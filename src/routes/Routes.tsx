@@ -1,6 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 import NotFound from '../pages/NotFound';
-import Login from '../pages/Login';
+import Login from '../pages/auth/Login';
+import Home from '../pages/main/Home';
+import Dashboard from '../pages/admin/Dashboard';
+import Test from '../pages/test/Test';
 import MainLayout from '../layouts/MainLayout';
 import LoginLayout from '../layouts/LoginLayout';
 import TestLayout from '../layouts/TestLayout';
@@ -13,7 +16,7 @@ const Routes = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <>Home</>,
+        element: <Home />,
       },
     ],
   },
@@ -33,7 +36,7 @@ const Routes = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <>Test</>,
+        element: <Test />,
       },
     ],
   },
@@ -43,7 +46,7 @@ const Routes = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <>Dashboard</>,
+        element: <Dashboard />,
       },
     ],
   },

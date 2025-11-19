@@ -5,17 +5,13 @@
  * @description 테스트는 TestLayout
  */
 import { Outlet } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
-import './App.css';
-import GlobalStyle from './styles/globalStyle';
-import { theme } from './styles/theme';
+import BaseLayout from './layouts/BaseLayout';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
+    <BaseLayout>
       <Outlet />
-    </ThemeProvider>
+    </BaseLayout>
   );
 }
 
