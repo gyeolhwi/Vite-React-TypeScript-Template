@@ -27,11 +27,14 @@ const GlobalStyle = createGlobalStyle`
   /* HTML 기본 설정 */
   html {
     font-size: 16px; /* 기본 */
+    height: 100%;
   }
 
   /* Body 기본 설정 */
   body {
     margin: 0;
+    height: 100%;
+    /* min-height: 100vh; */
     /* 폰트 렌더링 최적화 - macOS/iOS에서 텍스트를 더 부드럽게 보이게 함
        -webkit-font-smoothing: macOS/iOS Safari/Chrome에서 폰트를 안티앨리어싱 처리
        -moz-osx-font-smoothing: Firefox macOS에서 폰트를 그레이스케일 처리
