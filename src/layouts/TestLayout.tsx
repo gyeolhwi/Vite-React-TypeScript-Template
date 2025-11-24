@@ -8,10 +8,15 @@ interface TestLayoutProps {
   mode?: NavMode;
 }
 
+/**
+ * @description 레이아웃 (공통 Nav영역, 컨텐츠영역, 공통 Footer영역)
+ * @description mode에 따라서 Nav 배치가 바뀜
+ * @param mode 레이아웃 모드 (top, left, right)
+ */
 function TestLayout({ mode = 'top' }: TestLayoutProps) {
   return (
     <BaseLayout>
-      <S.TestLayout $mode={mode}>
+      <S.Layout $mode={mode}>
         {/* 공통 Nav영역 */}
         <S.Header $mode={mode}>
           <h1>Header</h1>
@@ -26,7 +31,7 @@ function TestLayout({ mode = 'top' }: TestLayoutProps) {
             <h1>Footer</h1>
           </S.Footer>
         </S.ContentWrapper>
-      </S.TestLayout>
+      </S.Layout>
     </BaseLayout>
   );
 }
@@ -34,7 +39,7 @@ function TestLayout({ mode = 'top' }: TestLayoutProps) {
 export default TestLayout;
 
 const S = {
-  TestLayout: styled.div<{ $mode: NavMode }>`
+  Layout: styled.div<{ $mode: NavMode }>`
     width: 100%;
     height: 100vh;
     padding: 2rem;
